@@ -37,27 +37,36 @@ npm install mocha -g
 npm install chai --save
 ```
 然后创建一个quiz1.js文件,其中附上写好的sumArray函数
-```
+``` javascript
 function sumArray(array) {
-  /// TODO 算法写这里
-  
+	/// TODO 算法写在这里
 }
 
-module.exports = sumAarray
+module.exports = sumArray
+
 ```
 然后创建一个单元测试文件quiz1.test.js，内容如下
 ```
-var asset = require("chai")
+var {assert} = require("chai")
+var sumArray = require("./quiz1")
 describe("sumArray测试", function() {
-  it("基础用法", function(){
-    assert.equal(sumArray(null), 0)
-    assert.equal(sumArray([ ]), 0)
-    assert.equal(sumArray([ 6, 2, 1, 8, 10 ]), 16)
-    assert.equal(sumArray([ -6, -20, -1, -10, -12  ]), -28)
-    assert.equal(sumArray([  -7, -5, -2, -1, 0, 1, 2, 3, 3, 4, 6, 6, 9, 9, 10, 10, 10, 13, 15, 16, 19, 20, 21 ]), -148)
-    /// TODO 在这里补充几组单元测试
-  })
+	it("边界条件测试", function(){
+		assert.equal(sumArray(null), 0)
+		assert.equal(sumArray([ ]), 0)
+	
+	})
+	
+	it("基础用法测试", function() {
+		assert.equal(sumArray([ 6, 2, 1, 8, 10 ]), 16)
+		/// TODO 在这里补充几组单元测试
+	}) 
+	
+	it("负数测试", function(){
+		assert.equal(sumArray([ -6, -20, -1, -10, -12  ]), -28)
+		assert.equal(sumArray([  -7, -5, -2, -1, 0, 1, 2, 3, 3, 4, 6, 6, 9, 9, 10, 10, 10, 13, 15, 16, 19, 20, 21 ]), 148)	
+	})
 })
+
 
 ```
 最后在命令行下执行测试
