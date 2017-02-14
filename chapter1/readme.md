@@ -12,6 +12,7 @@
 
 (阮一峰对Es6的介绍)[http://es6.ruanyifeng.com/#docs/intro]
 
+(知乎文 Mac开发效率)[https://www.zhihu.com/question/19819610]
 
 ### 作业&练习
 [quiz1.1](quiz1_1.md)
