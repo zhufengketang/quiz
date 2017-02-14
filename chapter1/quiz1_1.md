@@ -10,7 +10,7 @@
 
 ### 内容
 
-#### 题目1 ： javascript算法练习
+#### 题目1 ： （算法练习）javascript算法练习
 写一个javascript函数除去数组中的最高和最低元素，然后求和
 ```
 [ 6, 2, 1, 8, 10 ] => 16
@@ -24,7 +24,7 @@ function sumArray(array) {
 
 ```
 
-#### 和小组成员讨论并完成下列单元测试
+#### 题目2： （环境配置训练+单元测试学习）和小组成员讨论并完成下列单元测试
 首先找到一个目录，创建一个package.json文件
 ``` javascript
 {
@@ -33,14 +33,36 @@ function sumArray(array) {
 ```
 然后安装单元测试工具
 ```
-npm install mocha chai --save
+npm install mocha -g
+npm install chai --save
 ```
-然后创建一个quiz1.js文件,其中附上
+然后创建一个quiz1.js文件,其中附上写好的sumArray函数
 ```
 function sumArray(array) {
   /// TODO 算法写这里
+  
 }
+
+module.exports = sumAarray
 ```
+然后创建一个单元测试文件quiz1.test.js，内容如下
+```
+var asset = require("chai")
+describe("sumArray测试", function() {
+  it("基础用法", function(){
+    assert.equal(sumArray([ 6, 2, 1, 8, 10 ]), 16)
+    /// TODO 在这里补充几组单元测试
+  })
+})
+
+```
+最后在命令行下执行测试
+```
+mocha quiz1.test.js
+```
+
+完成上述步骤后，请补充几组单元测试在quiz1.test.js中的TODO处，然后将整个目录除去node_modules打包。
+
 
 #### 题目3 (和小组成员讨论并简述下列问题少于150字）
 nodejs的作者是谁？ 什么时候发布的？ nodejs和npm的关系是什么？
