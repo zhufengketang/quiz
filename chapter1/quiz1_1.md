@@ -50,7 +50,11 @@ module.exports = sumAarray
 var asset = require("chai")
 describe("sumArray测试", function() {
   it("基础用法", function(){
+    assert.equal(sumArray(null), 0)
+    assert.equal(sumArray([ ]), 0)
     assert.equal(sumArray([ 6, 2, 1, 8, 10 ]), 16)
+    assert.equal(sumArray([ -6, -20, -1, -10, -12  ]), -28)
+    assert.equal(sumArray([  -7, -5, -2, -1, 0, 1, 2, 3, 3, 4, 6, 6, 9, 9, 10, 10, 10, 13, 15, 16, 19, 20, 21 ]), -148)
     /// TODO 在这里补充几组单元测试
   })
 })
@@ -60,6 +64,7 @@ describe("sumArray测试", function() {
 ```
 mocha quiz1.test.js
 ```
+测试完成后确保所有testcase都通过
 
 完成上述步骤后，请补充几组单元测试在quiz1.test.js中的TODO处，然后将整个目录除去node_modules打包。
 
