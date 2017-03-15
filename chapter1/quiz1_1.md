@@ -54,17 +54,17 @@ describe("sumArray测试", function() {
 	it("边界条件测试", function(){
 		assert.equal(sumArray(null), 0)
 		assert.equal(sumArray([ ]), 0)
-	
+
 	})
-	
+
 	it("基础用法测试", function() {
 		assert.equal(sumArray([ 6, 2, 1, 8, 10 ]), 16)
 		/// TODO 在这里补充几组单元测试
-	}) 
-	
+	})
+
 	it("负数测试", function(){
 		assert.equal(sumArray([ -6, -20, -1, -10, -12  ]), -28)
-		assert.equal(sumArray([  -7, -5, -2, -1, 0, 1, 2, 3, 3, 4, 6, 6, 9, 9, 10, 10, 10, 13, 15, 16, 19, 20, 21 ]), 148)	
+		assert.equal(sumArray([  -7, -5, -2, -1, 0, 1, 2, 3, 3, 4, 6, 6, 9, 9, 10, 10, 10, 13, 15, 16, 19, 20, 21 ]), 148)
 	})
 })
 
@@ -76,8 +76,6 @@ mocha quiz1.test.js
 ```
 测试完成后确保所有testcase都通过
 
-完成上述步骤后，请补充几组单元测试在quiz1.test.js中的TODO处，然后将整个目录除去node_modules打包。
-
 
 #### 题目3 (和小组成员讨论并简述下列问题少于150字）
 nodejs的作者是谁？ 什么时候发布的？ nodejs和npm的关系是什么？
@@ -86,7 +84,7 @@ nodejs的作者是谁？ 什么时候发布的？ nodejs和npm的关系是什么
 UIExplorer中大量使用了一门叫做flow.js的技术，这是做什么用的？
 
 #### 题目5 (和小组成员讨论并简述下列问题少于150字）
-UIExplorer进去后菜中中将知识分成了Component（组件）和Api（接口），这两部分的区别是什么？ 
+UIExplorer进去后菜中中将知识分成了Component（组件）和Api（接口），这两部分的区别是什么？
 
 #### 题目6（开放测试）
 - RN开发，你最终选择了哪款编辑器来写javascript？
