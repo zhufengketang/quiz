@@ -32,7 +32,7 @@ React Native 提供了键盘事件监听的库: [Keyboard](http://reactnative.cn
 制作完成后，实现一个返回顶部的按钮。 要求如下：
 1. 点击该按钮返回顶部（参考ScrollView文档）
 2. 在向上滑动过程中不显示这个按钮 监听onScroll
-3. 在向下滑动过程中线上这个按钮 监听onScroll
+3. 在向下滑动过程中显示这个按钮 监听onScroll
 
 ![图4](4.png)
 
