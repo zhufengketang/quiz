@@ -8,6 +8,7 @@ export default class Week2Numpad extends Component {
 
   render(){
     const W = Dimensions.get('window').width
+    const H = Dimensions.get('window').height
     return <View style={{flex : 1,
       backgroundColor : "white",
       justifyContent : 'center',

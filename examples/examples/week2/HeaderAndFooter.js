@@ -57,7 +57,7 @@ const footStyles = StyleSheet.create({
   container : {
     flexDirection : 'row',
     height : 40,
-    borderTopWidth : 1,
+    borderTopWidth : StyleSheet.hairlineWidth,
     borderTopColor : '#eee'
   },
   tab : {
