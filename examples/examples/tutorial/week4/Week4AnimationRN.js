@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 
-import {StatusBar, View, Text, Animated, Image, Button, Dimensions} from 'react-native'
+import {StatusBar, View, Text,
+  Easing,
+  Animated, Image, Button, Dimensions} from 'react-native'
 
 
 export default class Wee4AnimationRN extends Component{
@@ -14,15 +16,13 @@ export default class Wee4AnimationRN extends Component{
   }
 
   _play = () => {
-    this.setState({
-      animatedValue : new Animated.Value(0)
-    }, () => {
-      Animated.timing(
-        this.state.animatedValue, {
-          toValue : 1,
-          duration : 400
-        }).start()
-    })
+
+    this.state.animatedValue.setValue(0)
+    Animated.spring(
+      this.state.animatedValue, {
+        toValue : 1,
+        friction : 2,
+      }).start()
   }
 
 
