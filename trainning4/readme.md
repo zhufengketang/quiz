@@ -31,3 +31,11 @@
   gap={500}
 />
 ```
+
+比如说上面的配置， 数字1动画播放时间为600ms，数字2播放时间为1100ms， 数字3播放时间为1600ms，数字4播放时间为2100ms。 所以gap代表了递增的动画时间。
+
+实现提示：
+1. 定义一个自定义组件放在AnimatedNumber.js中
+2. 属性类型验证可以参考 [React属性类型校验](https://facebook.github.io/react/docs/typechecking-with-proptypes.html) **暂无中文文档** 可以使用翻译工具或词典
+3. 为了简化实现可以考虑写一个播放一个数字的子组件， 如： ANumber。 而AnimatedNumber是ANumber组件的组合。
+ 
