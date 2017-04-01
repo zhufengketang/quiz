@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import {View, Text,Image, Dimensions, TextInput, Button} from 'react-native'
+import {View, Text,Image, Dimensions, TextInput, Button, StyleSheet} from 'react-native'
 
 
 export default class Week2Login extends Component {
@@ -17,8 +17,16 @@ export default class Week2Login extends Component {
       </View>
 
       <View style={{justifyContent : 'center', alignItems : 'center', width : '100%'}}>
-          <TextInput style={{width : '60%', textAlign : 'center'}} placeholder='请输入用户名' />
-          <TextInput style={{width : '60%', textAlign : 'center'}} placeholder='请输入密码' />
+        <View style={styles.iptW}>
+          <TextInput
+            underlineColorAndroid='rgba(0,0,0,0)'
+            style={styles.input} placeholder='请输入用户名' />
+        </View>
+        <View style={styles.iptW}>
+          <TextInput
+            underlineColorAndroid='rgba(0,0,0,0)'
+            style={styles.input} placeholder='请输入密码' />
+        </View>
       </View>
 
       <View style={{justifyContent : 'center', alignItems : 'center', marginTop : 20}}>
@@ -29,3 +37,13 @@ export default class Week2Login extends Component {
     </View>
   }
 }
+
+const styles = StyleSheet.create({
+  iptW : {
+    borderBottomWidth : 1,
+    borderBottomColor : '#eee'
+  },
+  input : {
+    height : 50, width : '60%', textAlign : 'center'
+  }
+})
