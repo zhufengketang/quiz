@@ -38,4 +38,4 @@ import Wee4AnimationSequence from "./examples/tutorial/week4/Wee4AnimationSequen
 //import Week4Numbers from "./examples/homework/week4/Week4Numbers"
 //import Week4Login from "./examples/homework/week4/Week4Login"
 
-AppRegistry.registerComponent('examples', () => Week4Animation);
+AppRegistry.registerComponent('examples', () => Wee4AnimationSequence);

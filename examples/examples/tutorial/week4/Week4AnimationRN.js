@@ -4,6 +4,7 @@ import {StatusBar, View, Text,
   Easing,
   Animated, Image, Button, Dimensions} from 'react-native'
 
+import ensure_lock from "./ensure_lock"
 
 export default class Wee4AnimationRN extends Component{
 
@@ -15,14 +16,14 @@ export default class Wee4AnimationRN extends Component{
     }
   }
 
-  _play = () => {
+  _play = (done) => {
 
     this.state.animatedValue.setValue(0)
     Animated.spring(
       this.state.animatedValue, {
         toValue : 1,
         friction : 2,
-      }).start()
+      }).start(done)
   }
 
 
@@ -47,7 +48,7 @@ export default class Wee4AnimationRN extends Component{
 
       <View style={{position : 'absolute', bottom : '10%', width : '100%',  alignItems : 'center', justifyContent : 'center'}}>
         <View style={{width : 150}}>
-          <Button width={150} onPress={this._play} title='replay'></Button>
+          <Button width={150} onPress={ensure_lock(this._play)} title='replay'></Button>
         </View>
       </View>
     </View>

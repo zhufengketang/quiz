@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 
 import {StatusBar, View, Text, Image, Button, Dimensions} from 'react-native'
 
+import ensure_lock from "./ensure_lock"
+
 
 const interpolate = (rangeA, rangeB) => {
   return (value) => {
@@ -40,6 +42,7 @@ const animate = (duration, easingFunc, callback) => {
   _inner()
 }
 
+
 export default class Wee4Animation extends Component{
 
   constructor(){
@@ -48,9 +51,13 @@ export default class Wee4Animation extends Component{
     this.state = {
       animatedValue : 0
     }
+
+    this._play = ensure_lock(this._play)
   }
 
-  _play = () => {
+
+
+  _play = (done) => {
     this.setState({
       animatedValue : 0
     }, () => {
@@ -59,6 +66,9 @@ export default class Wee4Animation extends Component{
           animatedValue : value
         }, () => {
           next && next()
+          if(!next) {
+            done()
+          }
         })
       })
     })

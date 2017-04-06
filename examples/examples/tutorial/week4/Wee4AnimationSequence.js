@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 import {StatusBar, View, Text, Animated, Image, Button, Dimensions} from 'react-native'
 
+import ensure_lock from "./ensure_lock"
 
 export default class Wee4AnimationSequence extends Component{
 
@@ -14,7 +15,7 @@ export default class Wee4AnimationSequence extends Component{
     }
   }
 
-  _play = () => {
+  _play = (done) => {
     this.state.animatedValue.setValue(0)
     this.state.another.setValue(0)
     Animated.sequence([
@@ -34,7 +35,7 @@ export default class Wee4AnimationSequence extends Component{
           duration : 400
         }
       )
-    ]).start()
+    ]).start(done)
   }
 
 
@@ -70,7 +71,7 @@ export default class Wee4AnimationSequence extends Component{
 
       <View style={{position : 'absolute', bottom : '10%', width : '100%',  alignItems : 'center', justifyContent : 'center'}}>
         <View style={{width : 150}}>
-          <Button width={150} onPress={this._play} title='replay'></Button>
+          <Button width={150} onPress={ensure_lock(this._play)} title='replay'></Button>
         </View>
       </View>
     </View>
