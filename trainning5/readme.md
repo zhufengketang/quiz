@@ -8,14 +8,11 @@
 3. 列一个表格，左边是依赖名称，右边是依赖作用
 
 
-[React 依赖](https://github.com/facebook/react/blob/master/package.json)
-
-[vue 依赖](https://github.com/vuejs/vue/blob/dev/package.json)
-
 备注： 和第6周作业一起交
 
 
-### 习题2  
+### 习题2  组件制作训练
+
 
 
 
