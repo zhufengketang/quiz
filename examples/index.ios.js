@@ -35,7 +35,15 @@ import Week4AnimationRN from "./examples/tutorial/week4/Week4AnimationRN"
 import Wee4AnimationSequence from "./examples/tutorial/week4/Wee4AnimationSequence"
 
 /* homework 4*/
-//import Week4Numbers from "./examples/homework/week4/Week4Numbers"
-//import Week4Login from "./examples/homework/week4/Week4Login"
+import Week4Numbers from "./examples/homework/week4/Week4Numbers"
+import Week4Login from "./examples/homework/week4/Week4Login"
 
-AppRegistry.registerComponent('examples', () => Week4Animation);
+
+/* tutorial 5 */
+import Week5Component1 from "./examples/tutorial/week5/Week5Component1"
+import Week5Component2 from "./examples/tutorial/week5/Week5Component2"
+import Week5Gesture from "./examples/tutorial/week5/Week5Gesture"
+import Week5App from "./examples/tutorial/week5/app/Week5App"
+
+
+AppRegistry.registerComponent('examples', () => Week5App);

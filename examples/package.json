@@ -10,7 +10,8 @@
     "deep-equal": "^1.0.1",
     "react": "15.4.2",
     "react-native": "^0.42.0",
-    "react-native-blur": "^2.0.0"
+    "react-native-blur": "^2.0.0",
+    "react-navigation": "^1.0.0-beta.7"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
