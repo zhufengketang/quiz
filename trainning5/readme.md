@@ -31,7 +31,7 @@
 
 实现一个列表+详情的页面。
 
-![图1](1.gif)
+![图1](1.png)
 
 通过ListView实现一个列表， 可滚动；点击列表项然后跳转到详情。
 https://facebook.github.io/react-native/docs/listview.html
