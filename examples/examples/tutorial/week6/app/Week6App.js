@@ -2,9 +2,11 @@ import React, {Component} from 'react'
 
 import {StackNavigator} from 'react-navigation'
 
+import {Home, Page1, Page2, CourseList, CourseDetail} from 'screen'
 
-import {Home, Page1, Page2} from 'screen-w5'
 
+// 引用全局配置
+import "./global.def.js"
 /**
  * 代表一个完整的APP
  * APP的入口
@@ -26,11 +28,25 @@ import {Home, Page1, Page2} from 'screen-w5'
        }
      },
      Page2 : {
-
        screen : Page2,
        navigationOptions : {
          title : "Page 1"
        }
+     },
+     CourseList : {
+       screen : CourseList,
+       navigationOptions : {
+         title : "课程列表"
+       }
+     },
+     CourseDetail : {
+       screen : CourseDetail,
+       navigationOptions : {
+         title : (navigation) => {
+           return  `${navigation.state.params.course.title}`
+         }
+       }
      }
+
    })
  )
