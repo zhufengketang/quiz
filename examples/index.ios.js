@@ -52,4 +52,7 @@ import Week5ListApp from "./examples/homework/week5/Week5ListApp"
 /* tutorial 6 */
 import Week6App from "./examples/tutorial/week6/app/Week6App"
 
-AppRegistry.registerComponent('examples', () => Week6App);
+/* homework 6 */
+import Week6Tabs from './examples/homework/week6/Week6Tabs'
+
+AppRegistry.registerComponent('examples', () => Week6Tabs);

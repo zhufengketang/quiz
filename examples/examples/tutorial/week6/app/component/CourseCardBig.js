@@ -1,6 +1,8 @@
 
 import React, {Component} from 'react'
-import {View, Dimensions,TouchableOpacity, TouchableWithoutFeedback, Image, StyleSheet, Text} from 'react-native'
+import {
+  View, Dimensions,TouchableOpacity, TouchableWithoutFeedback, Image, StyleSheet, Text
+} from 'react-native'
 
 
 import {format_currency} from 'util'
