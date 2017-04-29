@@ -170,6 +170,12 @@ flow-bin
 }
 ```
 
+### code coverage
+#### React 
+coveralls
+#### VUE
+codecov
+
 ### typescript
 typescript
 
